@@ -1,0 +1,247 @@
+/*FontAwesome icons*/
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    /*display: inline-block;*/
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-bank:before {
+    content: "\f19c";
+}
+
+.fa-cc-visa:before {
+    content: "\f1f0";
+}
+
+.fa-cc-mastercard:before {
+    content: "\f1f1";
+}
+
+/*.fa-puzzle-piece:before {*/
+    /*content: "\f12e";*/
+/*}*/
+
+body {
+    margin: 0;
+    color: #333;
+}
+
+#header {
+    background: #00897b;
+    padding: 10px 0px;
+    color: #fff;
+
+}
+
+#header h1 {
+    margin: 5px 0px;
+}
+
+#header h1 ~ a {
+    padding: 13px 30px;
+    background: #fff;
+    font-size: 18px;
+    color: #00897b;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    max-width: 1170px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#card {
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding: 30px;
+    pointer-events: auto;
+}
+
+.card {
+    width: 40%;
+    margin: 30px 0px;
+    min-height: 130px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    border-radius: 7px;
+    z-index: 2;
+    background: #E0F2F1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+#card .card{
+    margin: 30px auto;
+}
+
+.modal-form .card {
+    display: flex;
+}
+
+.card .header {
+    align-self: flex-start;
+}
+
+.card .header h3 {
+    display: inline-block;
+}
+
+.card .number {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card .number input {
+    width: 20%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    border-bottom: solid 2px rgba(0, 85, 76, 0.3);
+    height: 20px;
+    text-align: center;
+}
+
+#card .comment label {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#card .comment textarea {
+    width: 40%;
+    padding: 20px;
+    outline: none;
+    border: solid 2px #b2ccc9;
+    border-radius: 7px;
+}
+
+.card .logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .logo i {
+    font-size: 24px;
+}
+
+#card .submit {
+    background: #00BCD4;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    margin: 15px 0px;
+    padding: 10px 15px;
+}
+
+#card .submit[disabled] {
+    background: #a3cdd4;
+    cursor: no-drop;
+}
+
+.modal-form {
+    z-index: 101;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.modal-form.visible {
+    display: flex;
+}
+
+.overlay {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.38);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur(makeShadow);
+}
+
+/*.not-cards {*/
+    /*display: flex;*/
+    /*margin: auto;*/
+    /*padding: 40px 30px;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+/*}*/
+
+/*.not-cards i {*/
+    /*font-size: 50px;*/
+    /*color: #EFEBE9;*/
+/*}*/
+
+
+
+@media (max-width: 600px) {
+    .card {
+        max-width: 100%;
+        width: auto;
+    }
+
+    #header {
+        padding: 10px 10px;
+    }
+
+    #header h1 {
+        font-size: 22px;
+    }
+
+    #header h1 ~ a {
+        padding: 7px 30px;
+    }
+
+    #card {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #card .comment textarea {
+        width: 100%;
+        padding: 0;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <h1>Notebook Bank cards</h1>
+        <a href="#">Add card</a>
+    </div>
+</header>
+<section id="main">
+    <div class="overlay" hidden></div>
+    <div class="modal-form">
+        <div class="container">
+            <form id="card">
+                <h2>Add card</h2>
+                <div class="card">
+                    <div class="header">
+                        <i class="fa fa-bank" aria-hidden="true"></i>
+                        <h3>Bank name</h3>
+                    </div>
+                    <div class="number">
+                        <input type="tel" maxlength="4">
+                        <input type="tel" maxlength="4">
+                        <input type="tel" maxlength="4">
+                        <input type="tel" maxlength="4">
+                    </div>
+
+                    <div class="logo">
+                        <span class="validate-text"></span>
+                        <i class="fa fa-cc-mastercard" hidden="true"></i>
+                        <i class="fa fa-cc-visa" hidden="true"></i>
+                    </div>
+                </div>
+                <div class="comment">
+                    <label for="comment">
+                        Enter a comment:</label>
+                    <textarea id="comment" rows="3" maxlength="1024"></textarea>
+                </div>
+                <input class="submit" type="button" disabled value="Add card">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!--<div class="not-cards">-->
+        <!--<i class="fa fa-puzzle-piece" aria-hidden="true"></i>-->
+        <!--<h2>Ooops... Cards not found</h2>-->
+        <!--<p>Click "Add card" to add cards</p>-->
+        <!--</div>-->
+        <div class="cards">
+            <div class="card" hidden>
+                <div class="header">
+                    <i class="fa fa-bank" aria-hidden="true"></i>
+                    <h3>Bank name</h3>
+                </div>
+                <div class="number">
+                    <span></span>
+                </div>
+
+                <div class="logo">
+                    <span class="validate-text"></span>
+                    <i class="fa fa-cc-mastercard" hidden="true"></i>
+                    <i class="fa fa-cc-visa" hidden="true"></i>
+                </div>
+                <div class="comment">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="card-list">
+
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
